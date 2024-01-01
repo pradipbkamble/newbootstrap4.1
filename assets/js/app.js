@@ -1,30 +1,42 @@
-const cl= console.log;
+let cl=console.log;
 
+const toglebtn=document.getElementById("toglebtn");
 
-
- let Stre ="i love javascript";
-
-
-//const revstr=givens =>givens.split(" ").reverse(" ").join(" ");
-//cl(revstr(Str))
-
-//let result='';
-//for (let i = 0; i<Stre.length; i++){
-
-  //  result= Stre[i]+result;
-//}
-//cl(result)
-
-//for(let kay in object )
-//for(let i in Stre){//cl(i)
-  //  cl(Stre[i])
-//}
-const revstr
-=(Stre)=>{
-let result ='';
-for(let i of Stre){
-    cl(i)   //here i is a itreator
-    result= i + result;  
+let onclick=(eve)=>{
+cl(eve.target)
+eve.target.classList.toggle("fa-xmark");
+eve.target.classList.toggle("fa-bars")
 }
-    return result;
-}
+
+
+
+
+
+
+
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    dots:false,
+    margin:10,
+    nav:true,
+    autoplay:true,
+    timer:1000,
+    
+    navText:[`<i class="fa-solid fa-caret-left"></i>`,`<i class="fa-solid fa-caret-right"></i>`],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+
+
+
+toglebtn.addEventListener("click",onclick)
