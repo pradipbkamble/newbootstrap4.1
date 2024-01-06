@@ -67,7 +67,8 @@ h1{
 
 
 .bagimg {
-    background: linear-gradient(black,blue,black);
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./assets/images/jpj3.jpg);
+    
      background-attachment: fixed;
     position: relative;
     background-position: center;
@@ -75,6 +76,9 @@ h1{
    
     
 } 
+.infoinfo{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/lights.jpg);
+}
 .imgs{
     height: 400px;
     object-fit: cover;
